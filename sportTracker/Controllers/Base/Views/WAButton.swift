@@ -76,7 +76,7 @@ private extension WAButton{
         
         iconView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.right.equalToSuperview().offset(-horizontalOffset)
+            make.right.equalToSuperview().offset(-10)
             make.height.equalTo(5)
             make.width.equalTo(13)
         }
@@ -86,7 +86,6 @@ private extension WAButton{
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(horizontalOffset * 2)
             make.trailing.equalTo(iconView.snp.leading).offset(-10)
-            make.left.equalToSuperview()
         }
     }
     

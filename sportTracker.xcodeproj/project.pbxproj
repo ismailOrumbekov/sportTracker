@@ -34,6 +34,7 @@
 		8D6862F02B43253000A2EA19 /* BaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6862EF2B43253000A2EA19 /* BaseInfoView.swift */; };
 		8D6862F32B45F7A200A2EA19 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6862F22B45F7A200A2EA19 /* TimerView.swift */; };
 		8D6862F62B45F83100A2EA19 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6862F52B45F83100A2EA19 /* ProgressView.swift */; };
+		8D7CA1662B488EA700E1094A /* PercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CA1652B488EA700E1094A /* PercentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		8D6862EF2B43253000A2EA19 /* BaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoView.swift; sourceTree = "<group>"; };
 		8D6862F22B45F7A200A2EA19 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		8D6862F52B45F83100A2EA19 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		8D7CA1652B488EA700E1094A /* PercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +298,7 @@
 			children = (
 				8D6862F22B45F7A200A2EA19 /* TimerView.swift */,
 				8D6862F52B45F83100A2EA19 /* ProgressView.swift */,
+				8D7CA1652B488EA700E1094A /* PercentView.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				8D57DFEE2B349725008934C8 /* TabBarController.swift in Sources */,
 				8D57DFBC2B349491008934C8 /* AppDelegate.swift in Sources */,
 				8D6862ED2B3E22F700A2EA19 /* Date.swift in Sources */,
+				8D7CA1662B488EA700E1094A /* PercentView.swift in Sources */,
 				8D57E0052B34A749008934C8 /* SessionController.swift in Sources */,
 				8D6862F02B43253000A2EA19 /* BaseInfoView.swift in Sources */,
 				8D6862F32B45F7A200A2EA19 /* TimerView.swift in Sources */,

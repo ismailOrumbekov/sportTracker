@@ -14,6 +14,30 @@ class SessionController: BaseController {
         
         return view
     }()
+    
+    private let timerDuration = 15.0
+    
+    override func navBarLeftButtonHandler() {
+        if timerView.state == .isStoped || timerView.state == .isPaused{
+            timerView.startTimer()
+            timerView.state = .isRuning
+            setTitleForNavBarButton(Resourses.Strings.Session.navBarPause, at: .left)
+        }else{
+            timerView.pauseTimer()
+            timerView.state = .isPaused
+            
+            setTitleForNavBarButton(Resourses.Strings.Session.navBarStart, at: .left)
+
+        }
+    }
+    
+    override func navBarRightButtonHandler() {
+        timerView.stopTimer()
+        timerView.state = .isStoped
+        setTitleForNavBarButton(Resourses.Strings.Session.navBarStart, at: .left)
+
+        
+    }
 }
 
 extension SessionController{
@@ -30,7 +54,8 @@ extension SessionController{
             make.leading.equalToSuperview().offset(15)
             make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
             make.trailing.equalToSuperview().offset(-15)
-            make.height.equalTo(500)
+//            make.height.equalTo(500)
+            
         }
     }
     
@@ -38,8 +63,17 @@ extension SessionController{
         super.configure()
         title = "High Intensity Cardio"
         navigationController?.tabBarItem.title = Resourses.Strings.TabBar.session
-        addNavBarButton(at: .left, with: "Pause")
-        addNavBarButton(at: .right, with: "Finish")
+        addNavBarButton(at: .left, with: Resourses.Strings.Session.navBarStart)
+        addNavBarButton(at: .right, with: Resourses.Strings.Session.navBarFinish)
+        
+        timerView.configure(with: timerDuration, progress: 0)
 
+        
+        timerView.callBack = {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+                self.navBarRightButtonHandler()
+
+            }
+        }
     }
 }
