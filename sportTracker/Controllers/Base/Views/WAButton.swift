@@ -22,7 +22,7 @@ final class WAButton: UIButton{
     }()
     private let iconView : UIImageView = {
        let iconView = UIImageView()
-        iconView.image = UIImage(systemName: "arrowshape.down")?.withRenderingMode(.alwaysTemplate)
+        iconView.image = Resourses.Images.WAButton?.withRenderingMode(.alwaysTemplate)
         iconView.contentMode = .scaleAspectFill
         return iconView
     }()

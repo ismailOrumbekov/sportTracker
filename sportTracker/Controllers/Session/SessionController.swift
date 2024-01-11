@@ -9,12 +9,10 @@ import UIKit
 
 class SessionController: BaseController {
     
-    private let timerView: TimerView = {
-        let view = TimerView(with: "Hello", buttonTitle: "button")
-        
-        return view
-    }()
+    private let timerView = TimerView()
     
+    private let statsView = StatsView(with: Resourses.Strings.Session.workoutStats)
+    private let stepsView = StepsView(with: Resourses.Strings.Session.stepcCounter)
     private let timerDuration = 15.0
     
     override func navBarLeftButtonHandler() {
@@ -45,6 +43,8 @@ extension SessionController{
         super.addViews()
         
         view.addSubview(timerView)
+        view.addSubview(statsView)
+        view.addSubview(stepsView)
     }
     
     override func setUpConstraint() {
@@ -54,8 +54,19 @@ extension SessionController{
             make.leading.equalToSuperview().offset(15)
             make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
             make.trailing.equalToSuperview().offset(-15)
-//            make.height.equalTo(500)
-            
+        }
+        
+        statsView.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(15)
+            make.top.equalTo(timerView.snp.bottom).offset(10)
+            make.trailing.equalTo(view.snp.centerX).offset(-7.5)
+        }
+        
+        stepsView.snp.makeConstraints { make in
+            make.leading.equalTo(view.snp.centerX).offset(7.5)
+            make.top.equalTo(statsView.snp.top)
+            make.trailing.equalToSuperview().offset(-15)
+            make.height.equalTo(200)
         }
     }
     
@@ -72,8 +83,20 @@ extension SessionController{
         timerView.callBack = {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1){
                 self.navBarRightButtonHandler()
-
             }
         }
+        
+        statsView.configure(with: [.averagePace(value: "8'20''"),
+            .heartRate(value: "155"),
+            .totalDistance(value: "8.25"),
+            .totalSteps(value:  "7,682")])
+        
+        stepsView.configure(with:[
+                                .init(value: "8k", heightPar: 1, title: "2/14"),
+                                .init(value: "7k", heightPar: 0.8, title: "2/15"),
+                                .init(value: "5k", heightPar: 0.6, title: "2/16"),
+                                .init(value: "6k", heightPar: 0.4, title: "2/17")
+                                ])
     }
 }
+

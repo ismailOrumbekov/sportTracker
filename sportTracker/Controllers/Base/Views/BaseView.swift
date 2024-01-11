@@ -28,5 +28,15 @@ class BaseView: UIView{
     func setUpConstraint(){}
     func configure(){
     }
+    
+//    override func addViews(){
+//        super.addViews()
+//    }
+//    override func setUpConstraint(){
+//        super.setUpConstraint()
+//    }
+//    override func configure(){
+//        super.configure()
+//    }
 
 }
