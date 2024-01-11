@@ -47,6 +47,7 @@
 		8D7CA1852B4C619900E1094A /* XAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CA1842B4C619900E1094A /* XAxisView.swift */; };
 		8D7CA1872B4E893700E1094A /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CA1862B4E893700E1094A /* ChartView.swift */; };
 		8D7CA18C2B4FE4BD00E1094A /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CA18B2B4FE4BD00E1094A /* SectionHeaderView.swift */; };
+		8D7CA18E2B4FEA3700E1094A /* TrainingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7CA18D2B4FEA3700E1094A /* TrainingCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		8D7CA1842B4C619900E1094A /* XAxisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XAxisView.swift; sourceTree = "<group>"; };
 		8D7CA1862B4E893700E1094A /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		8D7CA18B2B4FE4BD00E1094A /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		8D7CA18D2B4FEA3700E1094A /* TrainingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -439,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				8D7CA18B2B4FE4BD00E1094A /* SectionHeaderView.swift */,
+				8D7CA18D2B4FEA3700E1094A /* TrainingCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				8D57DFF12B3497CB008934C8 /* UIColor + ext.swift in Sources */,
 				8D7CA18C2B4FE4BD00E1094A /* SectionHeaderView.swift in Sources */,
 				8D6862E62B3DB1CB00A2EA19 /* BaseView.swift in Sources */,
+				8D7CA18E2B4FEA3700E1094A /* TrainingCellView.swift in Sources */,
 				8D6862EB2B3E1C5900A2EA19 /* WeekDayView.swift in Sources */,
 				8D7CA1872B4E893700E1094A /* ChartView.swift in Sources */,
 				8D7CA16A2B48A12300E1094A /* StatsView.swift in Sources */,

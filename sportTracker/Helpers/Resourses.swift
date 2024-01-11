@@ -67,13 +67,20 @@ enum Resourses{
         static let sessionIcon = UIImage(systemName: "figure")
         static let progressIcon = UIImage(systemName: "line.diagonal.arrow")
         static let settingsIcon = UIImage(systemName: "gear")
-        
         static let WAButton = UIImage(systemName: "arrowtriangle.down")
+        
         enum Session{
             static let stats_averagePace = UIImage(named: "stats_averagePace")
             static let stats_heartRate = UIImage(named: "stats_heartRate")
             static let stats_totalDistance = UIImage(named: "stats_totalDistance")
             static let stats_totalSteps = UIImage(named: "stats_totalSteps")
+        }
+        
+        enum Overview{
+            static let rightArrow = UIImage(named: "right_arrow")
+            static let checkmark_done = UIImage(named: "checkmark_done")
+            static let checkmark_not_done = UIImage(named: "checkmark_not_done")
+            
         }
         
     }

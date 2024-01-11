@@ -30,8 +30,11 @@ final class SectionHeaderView: UICollectionReusableView{
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with title: String){
-        self.title.text = title.uppercased()
+    func configure(with date: Date){
+        var dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE, MMM dd"
+        
+        self.title.text = dateFormatter.string(from: date).uppercased()
     }
 }
 
